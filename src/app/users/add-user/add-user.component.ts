@@ -38,7 +38,7 @@ export class AddUserComponent implements OnInit {
       email: ['', [Validators.required, Validators.email]],
       password: ['', [Validators.required]],
       cpassword: [''],
-      status:['']
+      status:[true]
 
     }, 
     { validator: this.passwordMatchValidator }
