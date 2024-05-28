@@ -1,0 +1,15 @@
+<div class="side-nav-content">
+    <ul class="nav-list">
+        <li>
+            <img class="logo-size" src="./assets/images/logo.png"/>
+        </li>
+        <li class="nav-list-item" *ngFor="let item of lists">
+            <a [routerLink]="[item.routerLnk]">
+                <span>
+                    <img class="left-menu-icon" src="./assets/images/icon/{{item.img}}" title="{{item.name}}"/>
+                    <span class="left-menu-text">{{item.name}}</span>
+                </span>
+            </a>
+        </li>
+    </ul>
+</div>

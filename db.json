@@ -1,0 +1,26 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "fname": "Ajay",
+      "lname": "kumar",
+      "email": "ajay@gmail.com",
+      "department": "dad2",
+      "role": "twewr2",
+      "address": "sec45, gurgaon",
+      "phone": "1212121222",
+      "status": true
+    },
+    {
+      "id": "e715",
+      "fname": "piyush",
+      "lname": "srivastava",
+      "email": "piyush@test.com",
+      "department": "engneering",
+      "role": "admin",
+      "address": "sec56, gurgaon",
+      "phone": "23423423434",
+      "status": true
+    }
+  ]
+}

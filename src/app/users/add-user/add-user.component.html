@@ -1,0 +1,129 @@
+<div class="card mb-3">
+  <div class="card-header">
+    <h6>User Lists</h6>
+    <a class="back-btn" [routerLink]="['./../../users/lists/']">&laquo;Back</a>
+  </div>
+  <!-- navigation -->
+  <ul class="breadcrumb"> 
+    <li><a [routerLink]="['/users/lists/']">Home</a></li>
+    <li style="font-size:15px; margin-top:3px;">User</li>
+    <li style="font-size:15px; margin-top:3px;">Add User</li>
+  </ul>
+
+<form [formGroup]="userForm" (ngSubmit)="submitForm()">
+    
+    <div class="container">
+        <div class="row">
+          <div class="col-sm">
+            <div class="mb-3">
+              
+                <label for="exampleInputEmail1" class="form-label">First Name</label>
+                <input type="text" formControlName="fname" required class="form-control">
+                <div class="text-danger" *ngIf="userForm.controls['fname'].invalid && (isFormSubmitted || userForm.controls['fname'].touched || userForm.controls['fname'].dirty)">
+                  First Name is required
+                </div>
+            </div>
+          </div>
+
+          <div class="col-sm">
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Last Name</label>
+                <input type="text" formControlName="lname" required class="form-control" >
+                <div class="text-danger" *ngIf="userForm.controls['lname'].invalid && (isFormSubmitted || userForm.controls['lname'].touched || userForm.controls['lname'].dirty)">
+                    Last Name is required
+                </div>
+            </div>
+          </div>
+          <div class="col-sm">
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Role</label>
+                <input type="text" formControlName="role" required class="form-control" >
+                <div class="text-danger" *ngIf="userForm.controls['role'].invalid && (isFormSubmitted || userForm.controls['role'].touched || userForm.controls['role'].dirty)">
+                    Role is required
+                </div>
+              </div>
+          </div>
+          <div class="col-sm">
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Department</label>
+                <input type="text" formControlName="department" required class="form-control" >
+                <div class="text-danger" *ngIf="userForm.controls['department'].invalid && (isFormSubmitted || userForm.controls['department'].touched || userForm.controls['department'].dirty)">
+                    Department is required
+                </div>
+              </div>
+          </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm">
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Email</label>
+                    <input type="text" formControlName="email" required class="form-control">
+                    <div class="text-danger" *ngIf="userForm.controls['email'].invalid && (isFormSubmitted || userForm.controls['email'].touched || userForm.controls['email'].dirty)">
+                        Email is required
+                    </div>
+                  </div>
+            </div>
+
+            <div class="col-sm">
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Phone Number</label>
+                    <input type="text" formControlName="phone" required class="form-control">
+                    <div class="text-danger" *ngIf="userForm.controls['phone'].invalid && (isFormSubmitted || userForm.controls['phone'].touched || userForm.controls['phone'].dirty)">
+                        Phone is required
+                    </div>
+                  </div>
+            </div>
+            <div class="col-sm">
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Password</label>
+                    <input type="password" formControlName="password" required class="form-control">
+                    <div class="text-danger" *ngIf="userForm.controls['password'].invalid && (isFormSubmitted || userForm.controls['password'].touched || userForm.controls['password'].dirty)">
+                        Password is required
+                    </div>
+
+                  </div>
+            </div>
+            <div class="col-sm">
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Confirm Password</label>
+                    <input type="password" formControlName="cpassword" class="form-control">
+                </div>
+                <div class="text-danger" *ngIf="userForm.controls['cpassword'].invalid && (isFormSubmitted || userForm.controls['cpassword'].touched || userForm.controls['cpassword'].dirty)">
+                  Password did not matched
+              </div>
+            </div>
+        </div>
+
+        <div class="row col-md-5">
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Address</label>
+                <!--<input type="text" formControlName="address" required class="form-control">-->
+                <textarea class="form-control" id="address" formControlName="address" name="address" required rows="4" cols="25"></textarea>
+                <div class="text-danger" *ngIf="userForm.controls['address'].invalid && (isFormSubmitted || userForm.controls['address'].touched || userForm.controls['address'].dirty)">
+                    Address is required
+                </div>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Status</label>
+
+                <label class="switch">
+                  <input type="checkbox" formControlName="status" name="status" value="true">
+                  <span class="slider round"></span>
+                </label>
+
+                <!--<input type="text" formControlName="status" required class="form-control">-->
+              </div>   
+        </div>
+    </div>
+
+    <div class="button-submit">
+      <button type="reset" class="cancel-btn">Cancel</button>&nbsp;
+      <button type="submit" [ngClass]="{'create-btn':!userForm.valid, 'create-btn-success':userForm.valid}" [disabled]="!userForm.valid">Create</button>&nbsp;
+    </div>
+
+  </form>
+</div>

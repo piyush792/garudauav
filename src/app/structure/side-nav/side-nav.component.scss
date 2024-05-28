@@ -1,0 +1,49 @@
+.side-nav-content {
+    width: 261.49px;
+    height: 983.16px;
+    top: 2px;
+    left: -2px;
+    opacity: 0px;
+}
+
+.border-white {
+    border: 1px solid white;
+}
+
+.nav-list {
+    list-style: none;
+    height: 100%;
+    padding: 0%;
+    margin-bottom: 0%;
+}
+
+.nav-list-item {
+    display: flex;
+    align-items: center;
+    height: 50px;
+}
+
+.nav-list-open .nav-list-item:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 8px;
+}
+
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.logo-size{
+    width: 216px;
+    height: 57.84px;
+}
+
+.left-menu-icon{
+    margin-left:10px;
+}
+
+.left-menu-text{
+    color: #6A6A6A;
+    margin-left:5px;
+}

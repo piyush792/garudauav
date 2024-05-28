@@ -1,1 +1,51 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+.montserrat {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+}
+
+.cancel-btn{
+    background-color: #E3E3E3;
+    width: 147px;
+    height: 58px;
+    top: 639px;
+    left: 453px;
+    gap: 0px;
+    border-radius: 10px;
+    color: #777777;
+    border: none;
+}
+
+.create-btn{
+    background: #E3E3E3;
+    width: 143px;
+    height: 57px;
+    top: 639px;
+    left: 615px;
+    border-radius: 10px;
+    color:#777777;
+    cursor: pointer;
+    border: none;
+}
+
+.create-btn-success{
+    background: #0ABFAB;
+    width: 143px;
+    height: 57px;
+    top: 639px;
+    left: 615px;
+    border-radius: 10px;
+    color:#fff;
+    cursor: pointer;
+    border: none;
+}
+
+.back-btn{
+    position: absolute;
+    right: 10px;
+    top: 8px;
+}
